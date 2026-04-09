@@ -1,0 +1,278 @@
+
+
+/* ROOT */
+:root {
+    --primary: #ff6b35;
+    --secondary: #f7931e;
+    --dark: #1a1a2e;
+    --light: #f4f6f9;
+    --white: #ffffff;
+    --shadow: 0 8px 25px rgba(0,0,0,0.1);
+    --radius: 15px;
+    --transition: 0.3s ease;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    background: rgba(255,255,255,0.95);
+    box-shadow: var(--shadow);
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--primary) !important;
+}
+
+.nav-link {
+    color: var(--dark) !important;
+    position: relative;
+    margin-left: 10px;
+}
+
+.nav-link::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+
+/* HERO SECTION FIX */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: brightness(0.6);
+}
+
+/* CENTER CONTENT */
+.hero-caption {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 700px;
+}
+
+/* TEXT STYLE */
+.hero-caption h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-caption p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn-cta {
+    background: var(--primary);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.btn-cta:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+/* outline button */
+.btn-cta-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-cta-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================
+   SECTION
+========================= */
+.section-pad {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.title-bar {
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin: 10px auto;
+}
+
+.section-subtitle {
+    color: gray;
+}
+
+/* =========================
+   DESTINATIONS
+========================= */
+.dest-card {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.dest-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.dest-card:hover {
+    transform: translateY(-10px);
+}
+
+.dest-body {
+    padding: 15px;
+}
+
+.dest-price {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* =========================
+   SERVICES
+========================= */
+.bg-light-section {
+    background: var(--light);
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-icon {
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact-section {
+    background: var(--dark);
+    color: white;
+}
+
+.contact-sub {
+    color: #ccc;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-info-item i {
+    color: var(--primary);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+    background: black;
+    color: white;
+}
+
+
+#backToTop {
+    display: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .hero-caption h1 {
+        font-size: 2rem;
+    }
+}
